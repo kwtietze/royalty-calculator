@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Royalty Calculator</title>
+</head>
+<body>
+    <main>
+        <section id="spotify-page">
+            <div class="logo-container spotify">
+                <img src="img/Spotify_Logo_RGB_Green.png" alt="Spotify" class="logo spotify">
+            </div>
+            <div class="spotify wrapper">
+                <div class="input-wrapper spotify">
+                    <label class="spotify" for="streams">Number of Streams</label>
+                    <input class="spotify" type="text" id="spotify-streams" placeholder="0" oninput="spotifyCalculate()">
+                </div>
+                <div class="input-wrapper spotify">
+                    <label class="spotify" for="streams">Percentage of Royalties</label>
+                    <div class="percentage-input-wrapper">
+                        <input class="spotify" type="text" id="spotify-percentage" value="100" oninput="spotifyCalculate()">
+                        <!-- <span>%</span> -->
+                    </div>
+                </div>
+                <div class="input-wrapper spotify">
+                    <label class="spotify" for="streams">Total:</label>
+                    <h2 id="spotify-total">$100</h2>
+                </div>
+            </div>
+            <div class="nav-container">
+                <a href="#tidal-page" class="tidal-link" onclick="tidalSelected()">Tidal</a>
+                <a href="#apple-page" class="apple-link" onclick="appleSelected()">Apple Music</a>
+                <a href="#spotify-page" class="spotify-link nav-selected" onclick="spotifySelected()">Spotify</a>
+            </div>
+        </section>
+        <section id="apple-page">
+            <div class="logo-container apple">
+                <img src="img/Apple Music_Icon_2020/AppleMusic_Icon_Color/RGB/SVG/Large/Apple_Music_Icon_RGB_lg_073120.svg" alt="" class="apple-logo">
+                <h3>Apple Music</h3>
+            </div>
+            <div class="apple wrapper">
+                <div class="input-wrapper apple">
+                    <label class="apple" for="streams">Number of Streams</label>
+                    <input id="apple-streams" type="text" class="apple" placeholder="0" oninput="appleCalculate()">
+                </div>
+                <div class="input-wrapper apple">
+                    <label class="apple" for="streams">Percentage of Royalties</label>
+                    <input id="apple-percentage" type="text" class="apple" value="100%" oninput="appleCalculate()">
+                </div>
+                <div class="input-wrapper apple">
+                    <label class="apple" for="streams">Total:</label>
+                    <h2 id="apple-total" class="total apple">$100</h2>
+                </div>
+            </div>
+        </section>
+        <section id="tidal-page">
+            <div class="logo-container tidal">
+                <img src="img/tidal-wide-white-rgb.png" alt="Tidal" class="logo tidal">
+            </div>
+            <div class="tidal wrapper">
+                <div class="input-wrapper tidal">
+                    <label class="tidal" for="streams">Number of Streams</label>
+                    <input id="tidal-streams" type="text" class="tidal" placeholder="0" oninput="tidalCalculate()">
+                </div>
+                <div class="input-wrapper tidal">
+                    <label class="tidal" for="streams">Percentage of Royalties</label>
+                    <input id="tidal-percentage" type="text" class="tidal" value="100%" oninput="tidalCalculate()">
+                </div>
+                <div class="input-wrapper tidal">
+                    <label class="tidal" for="streams">Total:</label>
+                    <h2 id="tidal-total" class="total tidal">$100</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
