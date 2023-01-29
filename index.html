@@ -16,24 +16,25 @@
             <div class="spotify wrapper">
                 <div class="input-wrapper spotify">
                     <label class="spotify" for="streams">Number of Streams</label>
-                    <input class="spotify" type="text" id="spotify-streams" placeholder="0" oninput="spotifyCalculate()">
+                    <input class="spotify" type="number" id="spotify-streams" placeholder="0" oninput="spotifyCalculate()">
                 </div>
                 <div class="input-wrapper spotify">
                     <label class="spotify" for="streams">Percentage of Royalties</label>
-                    <div class="percentage-input-wrapper">
-                        <input class="spotify" type="text" id="spotify-percentage" value="100" oninput="spotifyCalculate()">
-                        <!-- <span>%</span> -->
+                    <div class="percentage-wrapper">
+                        <input class="spotify percentage" type="number" id="spotify-percentage" value="100" oninput="spotifyCalculate()">
+                        <h2>%</h2>
                     </div>
                 </div>
                 <div class="input-wrapper spotify">
                     <label class="spotify" for="streams">Total:</label>
-                    <h2 id="spotify-total">$100</h2>
+                    <h2 id="spotify-total">$0</h2>
                 </div>
             </div>
             <div class="nav-container">
-                <a href="#tidal-page" class="tidal-link" onclick="tidalSelected()">Tidal</a>
-                <a href="#apple-page" class="apple-link" onclick="appleSelected()">Apple Music</a>
                 <a href="#spotify-page" class="spotify-link nav-selected" onclick="spotifySelected()">Spotify</a>
+                <a href="#apple-page" class="apple-link" onclick="appleSelected()">Apple Music</a>
+                <a href="#tidal-page" class="tidal-link" onclick="tidalSelected()">Tidal</a>
+
             </div>
         </section>
         <section id="apple-page">
@@ -44,15 +45,18 @@
             <div class="apple wrapper">
                 <div class="input-wrapper apple">
                     <label class="apple" for="streams">Number of Streams</label>
-                    <input id="apple-streams" type="text" class="apple" placeholder="0" oninput="appleCalculate()">
+                    <input id="apple-streams" type="number" class="apple" placeholder="0" oninput="appleCalculate()">
                 </div>
                 <div class="input-wrapper apple">
                     <label class="apple" for="streams">Percentage of Royalties</label>
-                    <input id="apple-percentage" type="text" class="apple" value="100%" oninput="appleCalculate()">
+                    <div class="percentage-wrapper">
+                        <input id="apple-percentage" type="number" class="apple percentage" value="100" oninput="appleCalculate()">
+                        <h2>%</h2>
+                    </div>
                 </div>
                 <div class="input-wrapper apple">
                     <label class="apple" for="streams">Total:</label>
-                    <h2 id="apple-total" class="total apple">$100</h2>
+                    <h2 id="apple-total" class="total apple">$0</h2>
                 </div>
             </div>
         </section>
@@ -63,15 +67,18 @@
             <div class="tidal wrapper">
                 <div class="input-wrapper tidal">
                     <label class="tidal" for="streams">Number of Streams</label>
-                    <input id="tidal-streams" type="text" class="tidal" placeholder="0" oninput="tidalCalculate()">
+                    <input id="tidal-streams" type="number" class="tidal" placeholder="0" oninput="tidalCalculate()">
                 </div>
                 <div class="input-wrapper tidal">
                     <label class="tidal" for="streams">Percentage of Royalties</label>
-                    <input id="tidal-percentage" type="text" class="tidal" value="100%" oninput="tidalCalculate()">
+                    <div class="percentage-wrapper">
+                        <input id="tidal-percentage" type="number" class="tidal percentage" value="100" oninput="tidalCalculate()">
+                        <h2>%</h2>
+                    </div>
                 </div>
                 <div class="input-wrapper tidal">
                     <label class="tidal" for="streams">Total:</label>
-                    <h2 id="tidal-total" class="total tidal">$100</h2>
+                    <h2 id="tidal-total" class="total tidal">$0</h2>
                 </div>
             </div>
         </section>

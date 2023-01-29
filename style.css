@@ -31,25 +31,28 @@ main {
 
 .nav-container {
     position: fixed;
-    transform: translateX(-100px) rotate(270deg);
-    bottom: 240px;
-    left: 0;
-    width: 240px;
+    top: 10px;
     display: flex;
     justify-content: space-between;
     z-index: 2;
+    max-width: 80vw;
+    width: 300px;
 }
 
 .nav-container a {
     text-decoration: none;
     color: white;
-    padding: 8px;
+    padding: 5px 8px;
     border-radius: 12px;
     transition: .5s;
 }
 
+.nav-container a:hover {
+    background: rgb(0, 0, 0, 20%)
+}
+
 .nav-selected {
-    background: #121314;
+    background: rgb(18, 19, 20, 80%);
 }
 
 section {
@@ -63,8 +66,16 @@ section {
 
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    max-width: 80vw;
+}
+
 .logo {
     width: 300px;
+    max-width: 80vw;
 }
 
 .wrapper {
@@ -74,8 +85,9 @@ section {
     justify-content: space-between;
     padding: 20px 0;
     border-radius: 20px;
-    margin-top: 20px;
-    max-width: 85vw;
+    width: 80vw;
+    max-width: 1000px;
+    margin-top: 10px;
 }
 
 .input-wrapper {
@@ -95,12 +107,36 @@ input {
     font-size: 60px;
     background: none;
     font-weight: 300;
-    
+    -moz-appearance: textfield;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+input.percentage {
+    width: 3ch;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus {
+    background: rgb(0, 0, 0, 15%);
+    outline: none;
+}
+
+.percentage-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
     font-size: 60px;
     font-weight: 300;
+    max-width: 300px;
+    overflow: scroll;
 }
 
 /* Spotify styles */
@@ -117,6 +153,7 @@ h2 {
 
 input.spotify {
     color: #fff;
+    font-family: 'Circular Std';
 }
 
 
@@ -125,11 +162,6 @@ input.spotify {
 #apple-page {
     font-family: 'SF Pro';
     background: linear-gradient(120deg, #FA57D1, #69A6F9);
-}
-
-.apple.logo-container {
-    display: flex;
-    align-items: center;
 }
 
 .apple-logo {
@@ -145,6 +177,10 @@ h3 {
 
 .apple.wrapper {
     background: #fff;
+}
+
+.apple.input {
+    font-family: "SF Pro";
 }
 
 
@@ -163,4 +199,19 @@ h3 {
 
 input.tidal {
     color: #fff;
+    font-family: 'Nationale';
+}
+
+@media only screen and (max-width: 600px) {
+    h3 {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+    .apple-logo {
+        height: 60px;
+    }
+
+    section {
+        padding: 0;
+    }
 }
